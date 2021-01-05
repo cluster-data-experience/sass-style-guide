@@ -858,7 +858,7 @@ This creates consistency and sanity.
 
 > **Do:**
 
-```css
+```scss
 
 //_colors.scss
 $primary: white;
@@ -872,7 +872,7 @@ $primary: white;
 
 > **Don't:**
 
-```css
+```scss
 .button {
     background-color: white;
 }
