@@ -852,25 +852,43 @@ variables.**
 <a name="colors"></a>
 #### Colors
 
-Please only use the globally available colors from the Bigcommerce Library.
+All colors must be defined inside __colors.scss._ NEVER define a color directly inside your own SCSS. There's a file for that purpose.
 Your Micro app or component shouldn't really have a need for a *new* color.
 This creates consistency and sanity.
 
-Avoid using the `darken(color, %)` and `lighten(color, %)` mixins for similar reasons.
+> **Do:**
 
-Use the color maps available to you:
 ```css
-.component {
-    background-color: color("brand", "primary");
+
+//_colors.scss
+$primary: white;
+
+
+//_button.scss
+.button {
+    background-color: $primary;
 }
 ```
+
+> **Don't:**
+
+```css
+.button {
+    background-color: white;
+}
+```
+
 
 <a name="zindex"></a>
 #### z-index scale
 
-Please use the z-index scale defined in the Bigcommerce Library under global settings.
+Please use the z-index scale. Never use 99999999 or anything like that. Keep everything under control. You'll need to think about layers while structuring your app.
 
-`zIndex("lowest")` or `zIndex("high")` for example.
+For example:
+
+`z-index: 1 //component A`
+
+`z-index: 2 //component B on top of component A`
 
 
 <a name="fontweight"></a>
