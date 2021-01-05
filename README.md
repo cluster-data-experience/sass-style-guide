@@ -894,48 +894,9 @@ For example:
 <a name="fontweight"></a>
 #### Font Weight
 
-Bigcommerce apps share a strict set of font weights. Never declare a new font weight,
-only use the available font settings from the Bigcommerce Library. e.g.
+Font weights are defined inside it's own __fonts.scss_ file. Never declare a new font weight,
+only use the available font settings. If you need to use a different font family or weight, add it to the __fonts.scss_ file.
 
-```css
-fontWeight("light");
-fontWeight("semibold");
-```
-
-
-<a name="lineheight"></a>
-#### Line Height
-
-The Bigcommerce Library also provides a line height scale. This should be used for blocks
-of text. e.g.
-
-```css
-lineHeight("smallest");
-lineHeight("large");
-```
-
-Alternatively, when using line height to vertically centre a single line of text,
-be sure to set the line height to the height of the container - 1.
-
-```CSS
-.button {
-  height: remCalc(50px);
-  line-height: remCalc(49px);
-}
-```
-
-<a name="animations"></a>
-#### Animations
-
-Animation delays, durations and easing should be taken from the global framework
-
-<a name="mixins"></a>
-#### Mixins
-
-Mixins follow regular camel case naming conventions and do not require namespacing. If you are creating a mixin for a utility, it will need to match the utility name (including `u` namespacing).
-
-* `@mixin buttonVariant;`
-* `@mixin u-textTruncate;`
 
 <a name="polyfills"></a>
 ## Polyfills
