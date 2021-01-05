@@ -949,10 +949,6 @@ you should probably be adding the `js-` prefix. In practice this looks like this
 ## Folder Structure
 
 #### General principle
-The Sass folder structure we're proposing, will have two slight differences
-between the core framework and micro apps, however the bulk of the structure is
-identical between the two.
-
 The idea is to have the least amount of folders as possible, but as many as we
 need to define clear, structured patterns in your Sass.
 
