@@ -26,7 +26,6 @@ classes.
   * [Value Declaration](#value-declaration)
   * [Declaration Order](#declaration-order)
 * [Pseudo Elements and Classes](#pseudo)
-* [Units](#units)
 * [Nesting](#nesting)
 * [@extend or @inlcude](#extendorinclude)
 * [Components](#components)
@@ -400,32 +399,6 @@ _**elements**_ with a double colon.
     ...
 }
 ```
-
-
-<a name="units"></a>
-## Units
-
-> **Do:**
-
-* Use `rem` units as primary unit type. This includes:
-    * Positioning (`top`, `right`, `bottom`, `left`)
-    * Dimensions (Such as `width`, `height`, `margin`, `padding`)
-    * Font size
-* Use `px` units as primary unit type for the following properties:
-    * Border widths (`border: 1px solid #bada55;`)
-* Use `%` units only if necessary, where `rem` will not suffice:
-    * Positioning (`top`, `right`, `bottom`, `left`)
-    * Dimensions (`width`, `height`)
-* Line-height should be kept unit-less. If you find you're using a line-height
-with a set unit type, try to think of alternative ways to achieve the same outcome.
-If it's a unique case which requires a specific `px` or `rem` unit, outline the
-reasoning with comments so that others are aware of its purpose.
-
-> **Don't:**
-
-* Avoid all use of magic numbers. Re-think the problem. (`margin-top: 37px;`)
-
-
 
 <a name="nesting"></a>
 ## Nesting
