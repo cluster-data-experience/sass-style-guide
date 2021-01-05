@@ -964,6 +964,7 @@ need to define clear, structured patterns in your Sass.
 |   ├── settings/
 |   └── tools/
 |   └── vendor/
+|   └── layout/
 |   └── components/
 |   └── utilities/
 ```
@@ -985,6 +986,14 @@ foundation, animate.css, etc. All readily consumable third party files belong
 here, and can be imported in the framework base file as required. No file in
 the /vendor folder should ever be modified.
 
+**/layouts:** Contains your app "layouts" and page specific styling.
+Essentially creating the wrapping sections and grids for your app, where the
+core framework's components will live inside. For example, a layout file could
+potentially be your micro app's navigation. It is important to note that the
+styling for individual navigation items and all other inner components styling
+do not live in the layout file. There purpose is purely for the containing
+elements that set up your app.
+
 **/components:** Contains all of your components. This folder will make up the
 vast majority of your compiled CSS. All custom components simply live inside
 this folder, for example `/components/component/_component.scss`. It also contains
@@ -999,40 +1008,3 @@ mixin. An example being, truncatedText. You can utilise it by applying the class
 `.u-truncatedText` or by applying a mixin, `@include truncatedText;`.
 
 
-#### Micro App Folder Structure
-
-```
-.
-├── sass
-|   ├── settings/
-|   └── tools/
-|   └── vendor/
-|   └── layouts/
-|   └── components/
-|   └── utilities/
-|   └── shame/
-```
-
-There are only two minor differences in a micro app, when compared to the core
-framework. Firstly you'll notice that the /framework folder has been replaced by
-a /layouts folder, as well as the addition of the /shame folder.
-
-**/layouts:** Contains your micro app "layouts" and page specific styling.
-Essentially creating the wrapping sections and grids for your app, where the
-core framework's components will live inside. For example, a layout file could
-potentially be your micro app's navigation. It is important to note that the
-styling for individual navigation items and all other inner components styling
-do not live in the layout file. There purpose is purely for the containing
-elements that set up your app.
-
-**/shame:** This interestingly named folder has one goal: to remain empty. It's
-purpose is the place for all of those hot fixes or quick hacks in throwing
-something together. Any code which you don't feel is "complete" can also live
-here. It creates clear visibility on less than perfect code, especially when it
-comes to code reviews, and creates a trail for your dodgy code that if left
-somewhere in your component/layout code could be forgotten about and left.
-
-**A note on: /components & /utilities:** Within your micro app, these folders should
-only house your app's unique code. Any repeatable component or utility that could
-be re-used across other micro apps should be flagged and a PR opened for adding
-it into the core framework.
