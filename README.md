@@ -956,7 +956,7 @@ identical between the two.
 The idea is to have the least amount of folders as possible, but as many as we
 need to define clear, structured patterns in your Sass.
 
-#### Core Folder Structure
+#### App Folder Structure
 
 ```
 .
