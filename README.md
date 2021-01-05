@@ -1,5 +1,7 @@
 # Sass Coding Guidelines
 
+Cluster chose to use Bigcommerce's Sass styleguide.
+
 Bigcommerce uses [Sass](http://sass-lang.com/) for style generation.
 
 Bigcommerce's naming conventions are heavily influenced by the SUIT CSS framework
